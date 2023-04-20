@@ -11,7 +11,10 @@ export default async function MovieCard({params}){
             <h2 className="text-lg my-5">{movie.release_date}</h2>
             <h2>Runtime: {movie.runtime} minutes</h2>
             <h2 className="text-sm bg-green-500 inline-block my-2 py-2 px-4 rounded-xl">{movie.status}</h2>
-            <Image className="my-12 w-full" src={imagePath+movie.poster_path} alt={movie.title} width={600} height={600} priority/>
+            <div className="flex justify-center items-center">
+            <Image className="my-12" src={imagePath+movie.poster_path} alt={movie.title} width={600} height={600} priority/>
+            </div>
+            
         </div>
         </div>
     )
